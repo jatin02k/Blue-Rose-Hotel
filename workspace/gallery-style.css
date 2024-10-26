@@ -21,6 +21,7 @@ body, html {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
 }
+
 #home::before {
     content: ''; /* Necessary for pseudo-elements */
     position: absolute; /* Position it absolutely within the section */
@@ -28,9 +29,49 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0; /* Cover entire section */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.300); /* Semi-transparent black background */
     z-index: 0; /* Send the overlay behind the content */
 }
+
+/* Gallery Box Styling */
+.name-gallery {
+
+    font-size: 4rem;
+    margin-top: 100px;
+    margin-left: 900px;
+    color: #efeef0; /* Use a solid color that contrasts with the background */
+    position: relative; /* For absolute positioning of background */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+ 
+}
+
+/* Styling for tablets (screen width 1024px or smaller) */
+@media (max-width: 1024px) {
+    .name-gallery {
+        font-size: 3.5rem; /* Slightly smaller font size */
+        margin-top: 90px;
+        margin-left: 0; /* Center text */
+    }
+}
+@media (max-width: 768px) {
+    .name-gallery {
+        font-size: 3rem; /* Smaller font size for tablets */
+        margin-top: 80px;
+        margin-left: 0; /* Center it by setting left margin to 0 */
+    }
+}
+
+/* Styling for mobile devices (screen width 480px or smaller) */
+@media (max-width: 480px) {
+    .name-gallery {
+        font-size: 2rem; /* Smaller font size for mobile devices */
+        margin-top: 60px;
+        margin-left: 0; /* Keep the text centered */
+    }
+}
+
+
 
 
 /* Header styles */
@@ -103,26 +144,40 @@ nav ul li a {
     padding-right: 20px;
 }
 /*gallery section*/
-#gallery {
+/* Styles for the gallery section heading */
+#gallery h1 {
+    font-size: 2.5rem; /* Adjust the size as needed */
+    color: #1c46ba; /* Use a solid color that contrasts with the background */
+    text-shadow: 2px 2px 4px rgba(124, 238, 217, 0.7); /* Optional: Add a shadow for better visibility */
+    margin-bottom: 20px; /* Space below the heading */
+    position: relative; /* For absolute positioning of background */
     text-align: center;
-    padding: 20px;
+}
+
+/* Add a semi-transparent background to the heading */
+#gallery {
+    background: rgba(249, 249, 249, 0.393); /* Background with transparency */
+    padding: 20px; /* Add padding to the section */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space between images */
 }
 
 .gallery-image {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.2s;
+    width: 100%; /* Full width of the grid item */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crop images to cover the area */
+    border-radius: 10px; /* Rounded corners for images */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s; /* Smooth scaling on hover */
 }
 
 .gallery-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .overlay {

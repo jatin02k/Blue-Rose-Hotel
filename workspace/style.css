@@ -243,7 +243,42 @@ nav ul li a {
         font-size: 1em; /* Default button font size */
     }
 }
+/* Gallery Box Styling */
+.name-gallery {
 
+    font-size: 4rem;
+    margin-top: 100px;
+    margin-left: 900px;
+    color: #efeef0; /* Use a solid color that contrasts with the background */
+    position: relative; /* For absolute positioning of background */
+    text-align: center;
+ 
+}
+
+/* Styling for tablets (screen width 1024px or smaller) */
+@media (max-width: 1024px) {
+    .name-gallery {
+        font-size: 3.5rem; /* Slightly smaller font size */
+        margin-top: 90px;
+        margin-left: 0; /* Center text */
+    }
+}
+@media (max-width: 768px) {
+    .name-gallery {
+        font-size: 3rem; /* Smaller font size for tablets */
+        margin-top: 80px;
+        margin-left: 0; /* Center it by setting left margin to 0 */
+    }
+}
+
+/* Styling for mobile devices (screen width 480px or smaller) */
+@media (max-width: 480px) {
+    .name-gallery {
+        font-size: 2rem; /* Smaller font size for mobile devices */
+        margin-top: 60px;
+        margin-left: 0; /* Keep the text centered */
+    }
+}
 
 /* All Section General Styles */
 section {

@@ -6,7 +6,10 @@ const images = [
   "image5.jpg",
 ];
 
-let currentIndex = 0;
+// Create clones for seamless looping
+const imagesWithClones = [images[images.length - 1], ...images, images[0]];
+
+let currentIndex = 1; // Start at the first actual image
 
 function updateImages() {
   const galleryImages = document.querySelector(".gallery-images");
@@ -15,12 +18,21 @@ function updateImages() {
   const translateX = -(currentIndex * 33.33); // Shift by 33.33% for each image
   galleryImages.style.transform = `translateX(${translateX}%)`;
 
-  // Update image sources based on current index
-  const imgElements = document.querySelectorAll(".gallery-image");
-  imgElements.forEach((img, index) => {
-    // Set the images to show in the gallery with wrapping
-    img.src = images[(currentIndex + index) % images.length]; // Loop through images
-  });
+  // Smooth transition for all except the reset snaps
+  galleryImages.style.transition = "transform 0.5s ease";
+
+  // Check if we're at the first or last clone for a seamless loop
+  if (currentIndex === 0 || currentIndex === imagesWithClones.length - 1) {
+    setTimeout(() => {
+      // Temporarily disable transition to "snap" to the correct image
+      galleryImages.style.transition = "none";
+
+      // Update the currentIndex to the real first or last image
+      currentIndex = currentIndex === 0 ? images.length : 1;
+      const translateX = -(currentIndex * 33.33);
+      galleryImages.style.transform = `translateX(${translateX}%)`;
+    }, 500);
+  }
 }
 
 // Update images on load
@@ -28,13 +40,13 @@ updateImages();
 
 document.getElementById("next").addEventListener("click", () => {
   // Increment index to show the next image
-  currentIndex = (currentIndex + 1) % images.length; // Cycle to the next image
+  currentIndex = (currentIndex + 1) % imagesWithClones.length;
   updateImages();
 });
 
 document.getElementById("prev").addEventListener("click", () => {
   // Decrement index to show the previous image
-  currentIndex = (currentIndex - 1 + images.length) % images.length; // Cycle to the previous image
+  currentIndex = (currentIndex - 1 + imagesWithClones.length) % imagesWithClones.length;
   updateImages();
 });
 
