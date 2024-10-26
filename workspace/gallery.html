@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery-style.css">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="main-heading">
+            <span class="highlight">Blue Rose</span>
+            <br>
+            <span class="subheading">Home Stay & Restaurant</span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="attraction.html">Attraction</a></li>
+                <li class="con"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="home" class="hero"></section>
+
+    <section id="gallery">
+        <h1>Gallery</h1>
+        <div class="gallery-grid">
+            <img src="room1.jpg" alt="Image 1" class="gallery-image">
+            <img src="room2.jpg" alt="Image 2" class="gallery-image">
+            <img src="room3.jpg" alt="Image 3" class="gallery-image">
+            <img src="room.jpg" alt="Image 4" class="gallery-image">
+            <img src="thumbnail.jpg" alt="Image 5" class="gallery-image">
+            <img src="photo.jpg" alt="Image 6" class="gallery-image">
+            <img src="room1.jpg" alt="Image 1" class="gallery-image">
+            <img src="room2.jpg" alt="Image 2" class="gallery-image">
+            <img src="room3.jpg" alt="Image 3" class="gallery-image">
+            <img src="room.jpg" alt="Image 4" class="gallery-image">
+            <img src="thumbnail.jpg" alt="Image 5" class="gallery-image">
+            <img src="photo.jpg" alt="Image 6" class="gallery-image">
+            <img src="room1.jpg" alt="Image 1" class="gallery-image">
+            <img src="room2.jpg" alt="Image 2" class="gallery-image">
+            <img src="room3.jpg" alt="Image 3" class="gallery-image">
+            <img src="room.jpg" alt="Image 4" class="gallery-image">
+            <img src="thumbnail.jpg" alt="Image 5" class="gallery-image">
+            <img src="photo.jpg" alt="Image 6" class="gallery-image">
+            <img src="room1.jpg" alt="Image 1" class="gallery-image">
+            <img src="room2.jpg" alt="Image 2" class="gallery-image">
+            <img src="room3.jpg" alt="Image 3" class="gallery-image">
+            <img src="room.jpg" alt="Image 4" class="gallery-image">
+            <img src="thumbnail.jpg" alt="Image 5" class="gallery-image">
+            <img src="photo.jpg" alt="Image 6" class="gallery-image">
+            <img src="room2.jpg" alt="Image 2" class="gallery-image">
+            <!-- Add more images as needed -->
+        </div>
+
+        <!-- Overlay for displaying the image -->
+        <div id="overlay" class="overlay">
+            <span class="close" id="closeBtn">&times;</span>
+            <img id="overlayImage" class="overlay-image">
+            <span class="prev" id="prevBtn">&#10094;</span>
+            <span class="next" id="nextBtn">&#10095;</span>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Blue Rose Hotel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const overlayImage = document.getElementById('overlayImage');
+        const closeBtn = document.getElementById('closeBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const galleryImages = document.querySelectorAll('.gallery-image');
+
+        let currentIndex;
+
+        galleryImages.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                currentIndex = index; // Store the current index
+                overlayImage.src = image.src; // Set the clicked image to the overlay
+                overlay.style.display = 'flex'; // Show the overlay
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none'; // Hide the overlay
+        });
+
+        // Navigate to the previous image
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; // Loop back to the last image
+            overlayImage.src = galleryImages[currentIndex].src; // Change the overlay image
+        });
+
+        // Navigate to the next image
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length; // Loop back to the first image
+            overlayImage.src = galleryImages[currentIndex].src; // Change the overlay image
+        });
+
+        // Close overlay when clicking outside the image
+        overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+        //header appear disappear
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(".navbar-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            // Function to toggle the menu and button icon
+            function toggleMenu() {
+                navMenu.classList.toggle("show");
+                toggleButton.classList.toggle("open"); // Add a class to change icon
+            }
+
+            // Toggle menu when the button is clicked
+            toggleButton.addEventListener("click", toggleMenu);
+
+            // Close menu when clicking outside of it
+            document.addEventListener("click", function (event) {
+                if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+                    navMenu.classList.remove("show");
+                    toggleButton.classList.remove("open");
+                }
+            });
+        });
+        let lastScrollTop = 0; // Store the last scroll position
+        const header = document.querySelector('header'); // Select the header element
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY; // Get the current scroll position
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)'; // Hide the header
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)'; // Show the header
+            }
+
+            lastScrollTop = currentScroll; // Update the last scroll position
+        });
+    </script>
+</body>
+
+</html>
