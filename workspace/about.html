@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blue Rose Hotel</title>
+    <link rel="stylesheet" href="about-style.css"> <!-- Link to your existing CSS -->
+</head>
+
+<body>
+
+    <header>
+        <h1 class="main-heading">
+            <span class="highlight">Blue Rose</span>
+            <br>
+            <span class="subheading">Home Stay & Restaurant</span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="attraction.html">Attraction</a></li>
+                <li class="con"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <section id="home" class="hero"></section>
+
+    <section id="about">
+        <div class="contain">
+            <div class="text">
+                <h2>About Blue Rose Home Stay</h2>
+                <p>Welcome to Blue Rose, where luxury meets comfort. Nestled in the heart of Naukuchiatal, we
+                    offer a serene escape surrounded by nature's beauty. Our hotel is designed to provide guests with a
+                    relaxing and memorable experience, whether you’re here for a romantic getaway, a family vacation, or
+                    a business trip.</p>
+                <p>At Blue Rose, we pride ourselves on our exceptional service and attention to detail. Our dedicated
+                    staff is committed to ensuring that every aspect of your stay is perfect. From our comfortable rooms
+                    to our exquisite dining options, we strive to exceed your expectations.</p>
+            </div>
+            <div class="about-img">
+                <img src="room2.jpg" alt="About Blue Rose Hotel"> <!-- Replace with your image path -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="our-mission">
+        <h2>Our Mission</h2>
+        <div class="mission-content">
+            <div class="mission-item">
+                <h3><i class="fa-solid fa-laptop"></i></h3>
+                <p>To provide exceptional service and comfort to all our guests.</p>
+            </div>
+            <div class="mission-item">
+                <h3><i class="fa-solid fa-memory"></i></h3>
+                <p>To create memorable experiences through our hospitality.</p>
+            </div>
+            <div class="mission-item">
+                <h3><i class="fa-solid fa-seedling"></i></h3>
+                <p>To promote sustainability and environmental responsibility.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="values">
+        <div class="values-container">
+            <div class="values-image">
+                <img src="room1.jpg" alt="Our Values"> <!-- Replace with your image path -->
+            </div>
+            <div class="values-text">
+                <div class="values-points">
+                    <div class="point">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                        <br>
+                        <b>Quick and Affordable</b>
+                        <p>Your ideal stay with comfort and convenience at unbeatable rates.</p>
+                    </div>
+                    <div class="point">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <br>
+                        <b>Beautiful Interior Design</b>
+                        <p>Experience elegance and comfort in every corner of your stay.</p>
+                    </div>
+                    <div class="point">
+                        <i class="fa-regular fa-heart"></i>
+                        <br>
+                        <b>Physical Health Benefits</b>
+                        <p>Recharge your body with top-notch amenities and wellness-focused services.</p>
+                    </div>
+                    <div class="point">
+                        <i class="fa-solid fa-temperature-arrow-up"></i>
+                        <br>
+                        <b>Heater Availability</b>
+                        <p>Stay cozy and warm with our in-room heating facilities, ensuring your comfort in every
+                            season.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blue Rose Hotel. All rights reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/69513d7f0a.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(".navbar-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            // Function to toggle the menu and button icon
+            function toggleMenu() {
+                navMenu.classList.toggle("show");
+                toggleButton.classList.toggle("open"); // Add a class to change icon
+            }
+
+            // Toggle menu when the button is clicked
+            toggleButton.addEventListener("click", toggleMenu);
+
+            // Close menu when clicking outside of it
+            document.addEventListener("click", function (event) {
+                if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+                    navMenu.classList.remove("show");
+                    toggleButton.classList.remove("open");
+                }
+            });
+        });
+        let lastScrollTop = 0; // Store the last scroll position
+        const header = document.querySelector('header'); // Select the header element
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY; // Get the current scroll position
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)'; // Hide the header
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)'; // Show the header
+            }
+
+            lastScrollTop = currentScroll; // Update the last scroll position
+        });
+
+    </script>
+
+</body>
+
+</html>

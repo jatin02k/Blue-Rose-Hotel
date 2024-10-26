@@ -1,0 +1,648 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: #f0f8ff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Header styles */
+.main-heading {
+    text-align: center; /* Center the text */
+    font-family: 'Arial', sans-serif; /* Choose a stylish font */
+    margin-top: 10px; /* Add some spacing */
+}
+
+.highlight {
+    font-size: 1em; /* Make 'Blue Rose' bigger */
+    color: #0000FF; /* Blue color for 'Blue Rose' */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
+.subheading {
+    font-size: 0.5em; /* Smaller than 'Blue Rose' */
+    color: #333; /* A darker color for contrast */
+    font-style: italic; /* Add some flair with italics */
+    display: block; /* Keep it on a separate line */
+}
+
+header {
+    background: rgba(0, 51, 102, 0.8); /* Dark blue background with transparency */
+    color: #228ae5; /* Light azure */
+    background-color: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #021014; /* Light blue */
+    justify-content: flex-start;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    padding: 0 10px; /* Add horizontal padding */
+    width: calc(100% - 20px); /* Consider scrollbar width */
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 10px;
+    padding: 10px;
+}
+nav ul li a {
+    color: #2574b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+.con{
+    padding-right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    header {
+        padding: 5px 10px;
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .main-heading {
+        font-size: 1.2em; /* Smaller font size */
+        text-align: left; /* Align text to the left */
+        flex: 1; /* Allow space for the toggle button */
+    }
+
+    .highlight {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .subheading {
+        font-size: 0.6em; /* Smaller font size for subheading */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the menu icon on mobile */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        position: absolute;
+        top: 50px; /* Position it below the toggle button */
+        right: 0; /* Align to the right */
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when 'show' class is added */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    .main-heading {
+        font-size: 1.5em;
+    }
+
+    .highlight {
+        font-size: 1.6em;
+    }
+
+    .subheading {
+        font-size: 0.75em;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+
+/* Hero background image and overlay Section Styles */
+#home {
+    background-image: url('photo.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 51, 102, 0.7); /* Dark blue with transparency */
+    color: #f0f8ff; /* Light azure */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Button Styles */
+.btn {
+    background: #4169e1; /* Royal blue */
+    color: #f0f8ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 2px solid #add8e6; /* Light blue border */
+}
+
+.btn:hover {
+    background: #add8e6; /* Light blue on hover */
+    color: #003366; /* Dark blue text */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    #home {
+        height: 100vh; /* Keep full height */
+    }
+
+    .overlay {
+        padding: 15px; /* Reduced padding */
+        border-radius: 8px; /* Slightly smaller border radius */
+    }
+
+    .overlay h2 {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+
+    .overlay p {
+        font-size: 0.9em; /* Adjust paragraph size */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Smaller padding for the button */
+        font-size: 0.9em; /* Adjust button font size */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #home {
+        height: 100vh; /* Keep full height */
+    }
+
+    .overlay {
+        padding: 20px; /* Default padding */
+        border-radius: 10px; /* Keep default border radius */
+    }
+
+    .overlay h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+
+    .overlay p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Default padding for button */
+        font-size: 1em; /* Default button font size */
+    }
+}
+
+
+/* All Section General Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f0f8ff; /* Light azure background for sections */
+    color: #003366; /* Dark blue text */
+}
+
+/* About Styles */
+#about {
+    padding: 60px 20px;
+    background-color: #f0f8ff; /* Light azure background */
+    color: #003366; /* Dark blue text */
+}
+
+.contain {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.row {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width */
+}
+
+.text {
+    flex: 1; /* Take up available space */
+    padding-right: 20px; /* Space between text and image */
+}
+
+.about-img {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: center; /* Center image */
+}
+
+.about-img img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Button Styles */
+.btn {
+    background: linear-gradient(90deg, #4169e1, #1e90ff); /* Gradient background */
+    color: #ffffff; /* White text */
+    padding: 12px 24px; /* Increased padding for a larger button */
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: inline-flex; /* Flexbox for alignment */
+    align-items: center; /* Center icon vertically */
+    transition: background 0.3s ease, transform 0.2s; /* Smooth transitions */
+}
+
+.btn i {
+    margin-left: 8px; /* Space between text and icon */
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #1e90ff, #4169e1); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn:active {
+    transform: translateY(0); /* Reset lift effect when active */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .contain {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .text {
+        padding-right: 0; /* Remove padding for mobile */
+        margin-bottom: 20px; /* Space between text and image */
+        text-align: center; /* Center text */
+        width: 100%; /* Ensure text takes full width */
+    }
+
+    .about-img {
+        display: none; /* Hide the image on mobile */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Slightly reduce padding */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contain {
+        flex-direction: row; /* Maintain row layout for tablets */
+        align-items: center; /* Center items */
+    }
+
+    .text {
+        padding-right: 20px; /* Add padding back for tablets */
+        margin-bottom: 0; /* Reset margin */
+        text-align: left; /* Align text to the left */
+    }
+
+    .about-img {
+        flex: 1; /* Allow image to take space on tablets */
+    }
+
+    .about-img img {
+        max-width: 90%; /* Ensure the image fits well */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Slightly reduce padding */
+    }
+}
+
+/* Rooms Styles */
+.rooms {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space images equally */
+    background-color: #f8f8f8;
+    padding: 20px; /* Add padding around the section */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.room {
+    position: relative; /* Position relative for absolute positioning of category */
+    flex: 1; /* Allow each room div to grow equally */
+    margin: 10px; /* Add margin between the room divs */
+    min-width: 280px; /* Set a minimum width for responsiveness */
+    max-width: calc(33.33% - 20px); /* Limit width for larger screens */
+}
+
+.room img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round the corners */
+}
+
+.room-category {
+    position: absolute; /* Position text over the image */
+    bottom: 10px; /* Position it at the bottom */
+    left: 10px; /* Adjust as needed */
+    color: white; /* Contrast color for visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px; /* Some padding for aesthetics */
+    border-radius: 5px; /* Round the corners */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .rooms {
+        flex-direction: column; /* Stack rooms vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .room {
+        max-width: 100%; /* Allow rooms to take full width */
+    }
+
+    .room-category {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding: 4px 8px; /* Adjust padding for mobile */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .rooms {
+        flex-direction: row; /* Maintain row layout for tablets */
+    }
+
+    .room {
+        max-width: calc(50% - 20px); /* Allow 2 rooms per row on tablets */
+    }
+
+    .room-category {
+        font-size: 16px; /* Adjust font size for tablets */
+        padding: 5px 10px; /* Maintain padding for tablets */
+    }
+}
+
+
+/* Contact Styles */
+#contact {
+    background-color: #333; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 40px 20px;
+    text-align: center; /* Center text */
+}
+
+#contact h2 {
+    font-size: 2.5em; /* Increase heading size */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-info {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.contact-item {
+    background-color: #444; /* Slightly lighter gray for contact items */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.contact-item h3 {
+    margin: 0 0 10px; /* Space below heading */
+    font-size: 1.2em; /* Size for subheadings */
+}
+
+.contact-item p {
+    margin: 0; /* Remove default margin */
+}
+
+.contact-item:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    #contact h2 {
+        font-size: 2em; /* Decrease heading size for mobile */
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr; /* Stack items in one column */
+        gap: 15px; /* Reduce space between items */
+        padding: 0 10px; /* Add some horizontal padding */
+    }
+
+    .contact-item {
+        padding: 15px; /* Reduce padding for mobile */
+    }
+
+    .contact-item h3 {
+        font-size: 1.1em; /* Slightly decrease subheading size */
+    }
+}
+
+
+
+
+
+
+/* gallery styles */
+#gallery {
+    padding: 60px 20px; /* Padding for the section */
+    text-align: center; /* Center text */
+    background-color: #f1ebe3; /* Light background for contrast */
+}
+
+#gallery h2 {
+    font-size: 2.5em; /* Heading size */
+    margin-bottom: 30px; /* Space below the heading */
+    font-weight: 400; /* Lighter font weight */
+}
+
+.gallery-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    position: relative; /* For positioning buttons */
+    overflow: hidden; /* Hide overflow */
+    width: 100%; /* Control width */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.gallery-images {
+    display: flex; /* Use flex for image positioning */
+    transition: transform 0.5s ease; /* Smooth transition for movement */
+}
+
+.gallery-image {
+    width: 33.33%; /* Each image takes up a third of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+
+/* To show previous and next images */
+.arrow-btn {
+    background-color: white; /* White background */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular shape */
+    font-size: 1.5em; /* Adjust arrow size */
+    cursor: pointer; /* Pointer cursor */
+    color: #333; /* Arrow color */
+    transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to center */
+    z-index: 1; /* Above images */
+    width: 40px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+#prev {
+    left: 10px; /* Position to the left */
+}
+
+#next {
+    right: 10px; /* Position to the right */
+}
+
+
+/* promo video styles */
+.promo-section {
+    position: relative; /* Set position relative to position the pseudo-element */
+    background-image: url('thumbnail.jpg'); /* Replace with your background image */
+    background-size: cover; /* Make the image cover the entire section */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the background so it doesn't move on scroll */
+    height: 70vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Ensure no overflow from pseudo-element */
+}
+
+.promo-section::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute; /* Position it absolutely within the section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Cover entire section */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 0; /* Send the overlay behind the content */
+}
+
+.promo-content {
+    z-index: 1; /* Ensure content is above the background */
+    padding: 20px; /* Space around text */
+}
+
+.hotel-name {
+    font-size: 36px; /* Size for hotel name */
+    margin: 0 0 10px; /* Margin below hotel name */
+}
+
+.promo-text {
+    font-size: 24px; /* Size for promotional text */
+    margin: 0 0 20px; /* Margin below promotional text */
+}
+
+.video-button {
+    font-size: 20px; /* Size for the button text */
+    padding: 10px 20px; /* Button padding */
+    border: 2px solid white; /* White border */
+    border-radius: 50px; /* Rounded button */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.video-button:hover {
+    background-color: white; /* Solid background on hover */
+    color: black; /* Change text color on hover */
+}
+/* Footer Styles */
+footer {
+    background: #003366; /* Dark blue */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it behaves well within the layout */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px 0; /* Slightly reduce padding */
+        font-size: 0.7em; /* Smaller font size */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+        padding: 20px 0; /* Default padding for tablets */
+        font-size: 0.8em; /* Default font size */
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Blue Rose Home Stay</title>
+    <link rel="stylesheet" href="contact-style.css"> <!-- Link to your existing CSS -->
+</head>
+
+<body>
+
+    <header>
+        <h1 class="main-heading">
+            <span class="highlight">Blue Rose</span>
+            <br>
+            <span class="subheading">Home Stay & Restaurant</span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="attraction.html">Attraction</a></li>
+                <li class="con"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="home" class="hero"></section>
+
+    <section id="contact">
+        <div class="contain">
+            <div class="text">
+                <div class="block b2">
+                    <i class="fa-regular fa-envelope"></i>
+                    <br>
+                    <b>email </b>
+                    <p><a href="">yourmail@yoursite.com</a>
+                        <br><a href="">yourmail@gmail.com</a>
+                    </p>
+                </div>
+                <div class="block b1">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <br>
+                    <b>address</b>
+                    <p>28 Green Tower, Street Name,<br>
+                        New York City, USA
+                    </p>
+                </div>
+                <div class="block b2">
+                    <i class="fa-solid fa-phone"></i>
+                    <br>
+                    <b>Phone</b>
+                    <p>
+                        <a href="">+13 445 87 01 99 </a><br>
+                        <a href=""> +14 867 00 79 41</a>
+                    </p>
+                </div>
+                <div class="block b1">
+                    <i class="fa-regular fa-clock"></i>
+                    <br>
+                    <b>working time</b>
+                    <p>
+                        Monday to Friday: 09:00 - 23:00 <br>
+                        Saturday- 11:00: 01:00 <br>
+                        Sunday- 12:00: 23:00 <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfWOSxGHRkFiQprRWo61cWnFHwsCcmKtnAdlimm548eVv-Q4g/viewform?embedded=true"
+            width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blue Rose Hotel. All rights reserved.</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/69513d7f0a.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(".navbar-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            // Function to toggle the menu and button icon
+            function toggleMenu() {
+                navMenu.classList.toggle("show");
+                toggleButton.classList.toggle("open"); // Add a class to change icon
+            }
+
+            // Toggle menu when the button is clicked
+            toggleButton.addEventListener("click", toggleMenu);
+
+            // Close menu when clicking outside of it
+            document.addEventListener("click", function (event) {
+                if (!navMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+                    navMenu.classList.remove("show");
+                    toggleButton.classList.remove("open");
+                }
+            });
+        });
+        let lastScrollTop = 0; // Store the last scroll position
+        const header = document.querySelector('header'); // Select the header element
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY; // Get the current scroll position
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)'; // Hide the header
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)'; // Show the header
+            }
+
+            lastScrollTop = currentScroll; // Update the last scroll position
+        });
+
+    </script>
+
+</body>
+
+
+</html>

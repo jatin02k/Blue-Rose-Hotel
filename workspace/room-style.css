@@ -1,0 +1,426 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: #f0f8ff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Header styles */
+.main-heading {
+    text-align: center; /* Center the text */
+    font-family: 'Arial', sans-serif; /* Choose a stylish font */
+    margin-top: 10px; /* Add some spacing */
+}
+
+.highlight {
+    font-size: 1em; /* Make 'Blue Rose' bigger */
+    color: #0000FF; /* Blue color for 'Blue Rose' */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
+.subheading {
+    font-size: 0.5em; /* Smaller than 'Blue Rose' */
+    color: #333; /* A darker color for contrast */
+    font-style: italic; /* Add some flair with italics */
+    display: block; /* Keep it on a separate line */
+}
+
+header {
+    background: rgba(0, 51, 102, 0.8); /* Dark blue background with transparency */
+    color: #228ae5; /* Light azure */
+    background-color: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #021014; /* Light blue */
+    justify-content: flex-start;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    padding: 0 10px; /* Add horizontal padding */
+    width: calc(100% - 20px); /* Consider scrollbar width */
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 10px;
+    padding: 10px;
+}
+nav ul li a {
+    color: #2574b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+.con{
+    padding-right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    header {
+        padding: 5px 10px;
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .main-heading {
+        font-size: 1.2em; /* Smaller font size */
+        text-align: left; /* Align text to the left */
+        flex: 1; /* Allow space for the toggle button */
+    }
+
+    .highlight {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .subheading {
+        font-size: 0.6em; /* Smaller font size for subheading */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the menu icon on mobile */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        position: absolute;
+        top: 50px; /* Position it below the toggle button */
+        right: 0; /* Align to the right */
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when 'show' class is added */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    .main-heading {
+        font-size: 1.5em;
+    }
+
+    .highlight {
+        font-size: 1.6em;
+    }
+
+    .subheading {
+        font-size: 0.75em;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+
+/* Hero background image and overlay Section Styles */
+#home {
+    background-image: url('room.webp'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    #home {
+        height: 100vh; /* Keep full height */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #home {
+        height: 100vh; /* Keep full height */
+    }
+}
+
+/* luxury room Section */
+#luxury-room {
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.luxury-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.luxury-text {
+    width: 45%;
+}
+
+.luxury-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.luxury-text p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.luxury-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.luxury-text ul li {
+    font-size: 1em;
+    margin-bottom: 8px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-now {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+.luxury-image-frame {
+    width: 45%;
+    padding: 30px; /* Space for the frame */
+    background-color: #f8f6f6; /* Frame color */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-image {
+    border: 5px solid #fff; /* Optional inner border */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.luxury-image img {
+    width: 100%;
+    height: 70vh;
+    display: block;
+}
+.luxury-image {
+    position: relative; /* Required to position the price tag */
+    border: 5px solid #fff; /* Optional inner border */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.price-tag {
+    position: absolute;
+    top: 340px; /* Adjust as needed */
+    right: 180px; /* Adjust as needed */
+    background-color: rgba(253, 253, 253, 0.89); /* Semi-transparent background */
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1.1em;
+    z-index: 1; /* Ensure it appears above the image */
+}
+.price-tag b{
+    font-size: 1.5rem;
+}
+
+#our-room {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#our-room h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.room-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-item img {
+    width: 100%;
+}
+
+.room-item h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.room-item p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.book-now {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+.contain {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.text {
+    flex: 1; /* Take up available space */
+    padding-right: 20px; /* Space between text and image */
+}
+.about-img {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: center; /* Center image */
+}
+
+.about-img img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+section {
+    padding: 40px 20px; /* Padding for sections */
+    background-color: #ffffff; /* White background for contrast */
+    color: #003366; /* Dark blue text */
+    text-align: left; /* Left align text for sections */
+}
+/* room */
+#room-facilities {
+    padding: 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#room-facilities h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#room-facilities p {
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.facility-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    color: rgb(11, 105, 126);
+}
+/* Footer Styles */
+footer {
+    background: #003366; /* Dark blue */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it behaves well within the layout */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px 0; /* Slightly reduce padding */
+        font-size: 0.7em; /* Smaller font size */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+        padding: 20px 0; /* Default padding for tablets */
+        font-size: 0.8em; /* Default font size */
+    }
+}

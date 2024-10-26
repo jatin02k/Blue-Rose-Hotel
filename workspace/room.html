@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Blue Rose Hotel</title>
+    <link rel="stylesheet" href="room-style.css"> <!-- Link to your existing CSS -->
+</head>
+
+<body>
+
+    <header>
+        <h1 class="main-heading">
+            <span class="highlight">Blue Rose</span>
+            <br>
+            <span class="subheading">Home Stay & Restaurant</span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="room.html">Rooms</a></li>
+                <li><a href="attraction.html">Attraction</a></li>
+                <li class="con"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="home" class="hero"></section>
+
+    <section id="luxury-room">
+        <div class="luxury-content">
+            <div class="luxury-text">
+                <h2>Luxury Room</h2>
+                <p>Experience the ultimate comfort and elegance in our luxury rooms, featuring premium facilities and
+                    services.</p>
+                <ul>
+                    <li>King-size bed</li>
+                    <li>Ensuite bathroom with jacuzzi</li>
+                    <li>High-speed Wi-Fi</li>
+                    <li>Mini-bar and room service</li>
+                    <li>Ocean view balcony</li>
+                </ul>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="luxury-image-frame">
+                <div class="luxury-image">
+                    <div class="price-tag"> <b>$150</b> / per day</div>
+                    <img src="room1.jpg" alt="Luxury Room">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="our-room">
+        <h2>Our Room</h2>
+        <div class="room-grid">
+            <div class="room-item">
+                <img src="room1.jpg" alt="Room 1">
+                <h3>Deluxe Room</h3>
+                <p>A spacious room with a king-size bed, modern amenities, and a beautiful view.</p>
+                <p class="price">$120 / per day</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="room-item">
+                <img src="room2.jpg" alt="Room 2">
+                <h3>Executive Room</h3>
+                <p>Elegantly designed room with premium facilities and a relaxing ambiance.</p>
+                <p class="price">$150 / per day</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="room-item">
+                <img src="room3.jpg" alt="Room 3">
+                <h3>Standard Room</h3>
+                <p>Comfortable and affordable room with essential amenities for a pleasant stay.</p>
+                <p class="price">$90 / per day</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <!-- Repeat similar divs for 6 more rooms -->
+        </div>
+    </section>
+
+
+    <section id="room-facilities">
+        <h2>Our Room Facilities</h2>
+        <p>Blue Rose will Give Best Service</p>
+
+        <div class="facilities-grid">
+            <div class="facility-item">Free Wi-Fi</div>
+            <div class="facility-item">Heater</div>
+            <div class="facility-item">Room Service</div>
+            <div class="facility-item">Flat-Screen TV</div>
+            <div class="facility-item">Minibar</div>
+            <div class="facility-item">In-Room Safe</div>
+            <div class="facility-item">Laundry Service</div>
+            <div class="facility-item">Parking </div>
+            <div class="facility-item">Barbeque</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blue Rose Hotel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0; // Store the last scroll position
+const header = document.querySelector('header'); // Select the header element
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY; // Get the current scroll position
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        header.style.transform = 'translateY(-100%)'; // Hide the header
+    } else {
+        // Scrolling up
+        header.style.transform = 'translateY(0)'; // Show the header
+    }
+
+    lastScrollTop = currentScroll; // Update the last scroll position
+});
+
+    </script>
+
+</body>
+
+</html>

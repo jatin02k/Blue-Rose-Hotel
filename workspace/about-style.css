@@ -1,0 +1,482 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: #f0f8ff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Header styles */
+.main-heading {
+    text-align: center; /* Center the text */
+    font-family: 'Arial', sans-serif; /* Choose a stylish font */
+    margin-top: 10px; /* Add some spacing */
+}
+
+.highlight {
+    font-size: 1em; /* Make 'Blue Rose' bigger */
+    color: #0000FF; /* Blue color for 'Blue Rose' */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
+.subheading {
+    font-size: 0.5em; /* Smaller than 'Blue Rose' */
+    color: #333; /* A darker color for contrast */
+    font-style: italic; /* Add some flair with italics */
+    display: block; /* Keep it on a separate line */
+}
+
+header {
+    background: rgba(0, 51, 102, 0.8); /* Dark blue background with transparency */
+    color: #228ae5; /* Light azure */
+    background-color: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #021014; /* Light blue */
+    justify-content: flex-start;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    padding: 0 10px; /* Add horizontal padding */
+    width: calc(100% - 20px); /* Consider scrollbar width */
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 10px;
+    padding: 10px;
+}
+nav ul li a {
+    color: #2574b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+.con{
+    padding-right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    header {
+        padding: 5px 10px;
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .main-heading {
+        font-size: 1.2em; /* Smaller font size */
+        text-align: left; /* Align text to the left */
+        flex: 1; /* Allow space for the toggle button */
+    }
+
+    .highlight {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .subheading {
+        font-size: 0.6em; /* Smaller font size for subheading */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the menu icon on mobile */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        position: absolute;
+        top: 50px; /* Position it below the toggle button */
+        right: 0; /* Align to the right */
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when 'show' class is added */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    .main-heading {
+        font-size: 1.5em;
+    }
+
+    .highlight {
+        font-size: 1.6em;
+    }
+
+    .subheading {
+        font-size: 0.75em;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+/* Hero background image and overlay Section Styles */
+#home {
+    background-image: url('about.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    #home {
+        height: 60vh; /* Keep full height */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #home {
+        height: 60vh; /* Keep full height */
+    }
+}
+
+section {
+    padding: 40px 20px; /* Padding for sections */
+    background-color: #ffffff; /* White background for contrast */
+    color: #003366; /* Dark blue text */
+    text-align: left; /* Left align text for sections */
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background-color: rgba(240, 248, 255, 0.9); /* Light azure background with transparency */
+    color: #003366; /* Dark blue text */
+    text-align: center;
+}
+
+/* Container styles */
+.contain {
+    display: flex;
+    flex-direction: row; /* Row direction for larger screens */
+    align-items: center;
+    gap: 20px; /* Space between items */
+}
+
+/* Text section styles */
+.text {
+    flex: 1;
+    font-size: 1rem; /* Default font size */
+}
+
+/* About image styles */
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .about-img img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .contain {
+        flex-direction: column; /* Stack items vertically for smaller screens */
+    }
+}
+
+/* Additional styles for smaller mobile devices */
+@media (max-width: 480px) {
+    #about {
+        padding: 30px 10px;
+    }
+    .about-img img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .text {
+        font-size: 0.8rem; /* Slightly smaller font for smaller screens */
+    }
+}
+
+
+
+/*mission section*/
+#our-mission {
+    padding: 50px;
+    background-color: #f8f9fa;
+    text-align: center; /* Center-align text in the section */
+}
+
+.mission-content {
+    display: flex;
+    justify-content: center; /* Distribute space between items */
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.mission-item {
+    width: 25%; /* Each item takes up 30% of the row */
+    height: 40vh;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 10px; /* Margin for spacing */
+    
+}
+
+.mission-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: rgb(17, 29, 94);
+}
+
+.mission-item p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .mission-item {
+        width: 30%; /* Each item takes up 30% for tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .mission-item {
+        width: 100%; /* Each item takes up full width for mobile */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #our-mission {
+        padding: 30px; /* Adjust padding for mobile */
+    }
+}
+
+.mission-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: rgb(17, 29, 94);
+}
+
+.mission-item p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/*values secton*/
+#values {
+    padding: 0; /* Reset padding */
+}
+
+.values-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: stretch; /* Stretch items to the same height */
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.values-image {
+    flex: 1; /* Allow the image section to grow */
+    height: 100vh; /* Fixed height for image */
+    min-width: 300px; /* Prevent too small sizes */
+}
+
+.values-image img {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Cover the height */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.values-text {
+    flex: 1; /* Allow the text section to grow */
+    color: azure;
+    background-color: #242424;
+    padding: 20px; /* Add some padding */
+    text-align: center;
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.values-points {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+    justify-content: space-between; /* Space points evenly */
+    padding: 20px 0; /* Add vertical padding */
+}
+
+.point {
+    flex: 1 1 calc(50% - 20px); /* Allow two items per row with spacing */
+    max-width: 250px; /* Prevent points from being too wide */
+    background-color: #242424; /* Background for individual points */ 
+    margin: 10px; /* Space between points */
+    text-align: center; /* Center align text */
+    color: #afafaf;
+    padding: 20px; /* Padding for points */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.point b {
+    color: white; /* Bold text color */
+}
+
+.point i {
+    font-size: 30px; 
+    margin-bottom: 20px;
+    color: rgba(255, 217, 0, 0.767); /* Icon color */
+}
+
+/* Set a fixed height for smaller screens */
+@media (max-width: 1024px) {
+    .values-text {
+        height: 80vh; /* Match the image height */
+        overflow-y: auto; /* Add scrolling for overflow */
+    }
+}
+.values-image {
+    flex: 1; /* Allow the image section to grow */
+    height: 89.5vh; /* Fixed height for image */
+    min-width: 300px; /* Prevent too small sizes */
+}
+
+.values-points {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+    justify-content: space-between; /* Space points evenly */
+    padding: 20px 0; /* Add vertical padding */
+}
+
+.point {
+    flex: 1 1 30%; /* Allow two items per row with spacing */
+    max-width: 250px; /* Prevent points from being too wide */
+    background-color: #242424; /* Background for individual points */ 
+    margin: 10px; /* Space between points */
+    text-align: center; /* Center align text */
+    color: #afafaf;
+    padding: 10px; /* Reduced padding for points */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.point b {
+    color: white; /* Bold text color */
+    font-size: 1em; /* Smaller size */
+}
+
+.point p {
+    font-size: 0.8em; /* Smaller paragraph size */
+    line-height: 1.4; /* Slightly reduced line height for compactness */
+}
+
+.point i {
+    font-size: 30px; 
+    margin-bottom: 15px; /* Adjusted margin for compactness */
+    color: rgba(255, 217, 0, 0.767); /* Icon color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .values-image {
+        height: 89.5vh; /* Reduce height on smaller screens */
+    }
+
+    .point {
+        flex: 1 1 30%; /* Each point takes full width */
+        padding: 10px; /* Reduce padding for points */
+    }
+}
+
+@media (max-width: 600px) {
+    .values-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+    
+    .values-image {
+        height: auto; /* Allow image height to adjust based on aspect ratio */
+    }
+
+    .values-text {
+        padding: 5px; /* Further reduce padding on mobile */
+        height: auto; /* Reset height for mobile */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #003366; /* Dark blue */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it behaves well within the layout */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px 0; /* Slightly reduce padding */
+        font-size: 0.7em; /* Smaller font size */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+        padding: 20px 0; /* Default padding for tablets */
+        font-size: 0.8em; /* Default font size */
+    }
+}

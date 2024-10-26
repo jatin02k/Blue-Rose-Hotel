@@ -1,0 +1,312 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: #f0f8ff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Header styles */
+.main-heading {
+    text-align: center; /* Center the text */
+    font-family: 'Arial', sans-serif; /* Choose a stylish font */
+    margin-top: 10px; /* Add some spacing */
+}
+
+.highlight {
+    font-size: 1em; /* Make 'Blue Rose' bigger */
+    color: #0000FF; /* Blue color for 'Blue Rose' */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
+.subheading {
+    font-size: 0.5em; /* Smaller than 'Blue Rose' */
+    color: #333; /* A darker color for contrast */
+    font-style: italic; /* Add some flair with italics */
+    display: block; /* Keep it on a separate line */
+}
+
+header {
+    background: rgba(0, 51, 102, 0.8); /* Dark blue background with transparency */
+    color: #228ae5; /* Light azure */
+    background-color: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #021014; /* Light blue */
+    justify-content: flex-start;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    padding: 0 10px; /* Add horizontal padding */
+    width: calc(100% - 20px); /* Consider scrollbar width */
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 10px;
+    padding: 10px;
+}
+nav ul li a {
+    color: #2574b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+.con{
+    padding-right: 20px;
+}
+/* Mobile Styles */
+@media (max-width: 600px) {
+    header {
+        padding: 5px 10px;
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .main-heading {
+        font-size: 1.2em; /* Smaller font size */
+        text-align: left; /* Align text to the left */
+        flex: 1; /* Allow space for the toggle button */
+    }
+
+    .highlight {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    .subheading {
+        font-size: 0.6em; /* Smaller font size for subheading */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the menu icon on mobile */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        display: none; /* Hide the menu by default */
+        position: absolute;
+        top: 50px; /* Position it below the toggle button */
+        right: 0; /* Align to the right */
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when 'show' class is added */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    .main-heading {
+        font-size: 1.5em;
+    }
+
+    .highlight {
+        font-size: 1.6em;
+    }
+
+    .subheading {
+        font-size: 0.75em;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+/* Hero background image and overlay Section Styles */
+#home {
+    background-image: url('attraction-bg.avif'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    #home {
+        height: 60vh; /* Keep full height */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #home {
+        height: 60vh; /* Keep full height */
+    }
+}
+
+#attractions {
+    padding: 50px 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    position: relative; /* Positioning context for the image */
+}
+
+h2 {
+    font-size: 2em;
+    color: #021014; /* Dark color for contrast */
+    margin-bottom: 30px; /* Space below heading */
+    text-align: center; /* Center the heading */
+}
+
+.attractions-container {
+    display: flex; /* Use flexbox for layout */
+}
+
+.attractions-list {
+    flex: 1; /* Take up 30% of the width */
+    background-color: #e9ecef; /* Light gray background */
+    padding: 20px; /* Padding around the list */
+    border-radius: 8px; /* Rounded corners */
+    position: sticky; /* Make the list sticky */
+    top: 20px; /* Distance from the top of the viewport */
+    height: 50vh; /* Fixed height based on viewport */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    margin-top: 50px;
+}
+
+.attractions-list ul {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+.attractions-list li {
+    margin-bottom: 15px; /* Space between list items */
+}
+
+.attractions-list a {
+    text-decoration: none; /* Remove underline */
+    color: #021014; /* Dark color for text */
+    font-weight: bold; /* Bold text */
+}
+
+.attractions-list a:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+.attractions-details {
+    flex: 3; /* Take up 70% of the width */
+    padding: 0 20px; /* Padding for details */
+    overflow-y: auto; /* Allow vertical scrolling for details */
+    max-height: calc(100vh - 40px); /* Limit height to viewport */
+    transition: margin-top 0.3s ease; /* Smooth transition for margin changes */
+    margin-top: 50px; /* Initial margin to offset the top */
+}
+
+.attraction-item {
+    margin-bottom: 40px; /* Space between attraction items */
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip overflow content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+}
+
+.attraction-item img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Automatic height */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.attraction-item h3 {
+    font-size: 1.5em; /* Heading size */
+    margin: 10px 0; /* Space around heading */
+    color: #021014; /* Dark color for contrast */
+}
+
+.attraction-item p {
+    padding: 0 10px; /* Padding around text */
+    color: #333; /* Text color */
+    font-size: 0.9em; /* Font size for description */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8em; /* Smaller heading for tablets */
+    }
+    .attractions-list {
+        flex: 1; /* Adjust list width */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* Smaller heading for mobile */
+    }
+    .attractions-list {
+        flex: 1; /* Adjust list width */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background: #003366; /* Dark blue */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it behaves well within the layout */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px 0; /* Slightly reduce padding */
+        font-size: 0.7em; /* Smaller font size */
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+        padding: 20px 0; /* Default padding for tablets */
+        font-size: 0.8em; /* Default font size */
+    }
+}
