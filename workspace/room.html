@@ -37,30 +37,53 @@
     <section id="luxury-room">
         <div class="luxury-content">
             <div class="luxury-text">
-                <h2>Luxury Room</h2>
+                <h2>Superior Room</h2>
                 <p>Experience the ultimate comfort and elegance in our luxury rooms, featuring premium facilities and
                     services.</p>
                 <ul>
                     <li>King-size bed</li>
-                    <li>Ensuite bathroom with jacuzzi</li>
+                    <li>Ensuite bathroom</li>
                     <li>High-speed Wi-Fi</li>
                     <li>Mini-bar and room service</li>
-                    <li>Ocean view balcony</li>
+                    <li>Scenic view balcony</li>
                 </ul>
                 <button class="book-now">Book Now</button>
             </div>
             <div class="luxury-image-frame">
                 <div class="luxury-image">
-                    <div class="price-tag"> <b>$150</b> / per day</div>
+                    <div class="price-tag"> <b>&#8377;3500</b> / per night</div>
                     <img src="room1.jpg" alt="Luxury Room">
                 </div>
             </div>
         </div>
     </section>
+    <section id="luxury-room">
+        <div class="luxury-content">
+            <div class="luxury-image-frame">
+                <div class="luxury-image">
+                    <div class="price-tag"> <b>&#8377;4500</b> / per day</div>
+                    <img src="Family-room.jpg" alt="Luxury Room">
+                </div>
+            </div>
+            <div class="luxury-text">
+                <h2>Familiy Suite Room</h2>
+                <p>Experience the ultimate comfort and elegance in our luxury rooms, featuring premium facilities and
+                    services.</p>
+                <ul>
+                    <li>Two beds</li>
+                    <li>Ensuite bathroom with Heater</li>
+                    <li>High-speed Wi-Fi</li>
+                    <li>Mini-bar and room service</li>
+                </ul>
+                <button class="book-now">Book Now</button>
+            </div>
+
+        </div>
+    </section>
 
 
 
-    <section id="our-room">
+    <!-- <section id="our-room">
         <h2>Our Rooms</h2>
         <div class="room-grid">
             <div class="room-item">
@@ -84,9 +107,9 @@
                 <p class="price">$90 / per day</p>
                 <button class="book-now">Book Now</button>
             </div>
-            <!-- Repeat similar divs for 6 more rooms -->
+            Repeat similar divs for 6 more rooms 
         </div>
-    </section>
+    </section> -->
 
 
     <section id="room-facilities">
@@ -112,21 +135,21 @@
 
     <script>
         let lastScrollTop = 0; // Store the last scroll position
-const header = document.querySelector('header'); // Select the header element
+        const header = document.querySelector('header'); // Select the header element
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY; // Get the current scroll position
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY; // Get the current scroll position
 
-    if (currentScroll > lastScrollTop) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)'; // Hide the header
-    } else {
-        // Scrolling up
-        header.style.transform = 'translateY(0)'; // Show the header
-    }
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)'; // Hide the header
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)'; // Show the header
+            }
 
-    lastScrollTop = currentScroll; // Update the last scroll position
-});
+            lastScrollTop = currentScroll; // Update the last scroll position
+        });
 
     </script>
 

@@ -19,7 +19,7 @@ function updateImages() {
   galleryImages.style.transform = `translateX(${translateX}%)`;
 
   // Smooth transition for all except the reset snaps
-  galleryImages.style.transition = "transform 0.5s ease";
+  galleryImages.style.transition = "transform 1s ease";
 
   // Check if we're at the first or last clone for a seamless loop
   if (currentIndex === 0 || currentIndex === imagesWithClones.length - 1) {

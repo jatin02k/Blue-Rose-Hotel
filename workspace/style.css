@@ -405,7 +405,7 @@ section {
 /* Rooms Styles */
 .rooms {
     display: flex; /* Use flexbox for horizontal layout */
-    justify-content: space-between; /* Space images equally */
+    justify-content: space-evenly; /* Space images equally */
     background-color: #f8f8f8;
     padding: 20px; /* Add padding around the section */
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
@@ -416,7 +416,7 @@ section {
     flex: 1; /* Allow each room div to grow equally */
     margin: 10px; /* Add margin between the room divs */
     min-width: 280px; /* Set a minimum width for responsiveness */
-    max-width: calc(33.33% - 20px); /* Limit width for larger screens */
+    max-width: 600px; /* Limit width for larger screens */
 }
 
 .room img {
