@@ -3,52 +3,47 @@ const images = [
   "image2.jpg",
   "image3.jpg",
   "image4.jpg",
-  "image5.jpg",
+  "image5.jpg"
 ];
 
 // Create clones for seamless looping
 const imagesWithClones = [images[images.length - 1], ...images, images[0]];
-
 let currentIndex = 1; // Start at the first actual image
 
 function updateImages() {
   const galleryImages = document.querySelector(".gallery-images");
-
-  // Calculate the translate value
   const translateX = -(currentIndex * 33.33); // Shift by 33.33% for each image
   galleryImages.style.transform = `translateX(${translateX}%)`;
-
-  // Smooth transition for all except the reset snaps
-  galleryImages.style.transition = "transform 1s ease";
-
-  // Check if we're at the first or last clone for a seamless loop
-  if (currentIndex === 0 || currentIndex === imagesWithClones.length - 1) {
-    setTimeout(() => {
-      // Temporarily disable transition to "snap" to the correct image
-      galleryImages.style.transition = "none";
-
-      // Update the currentIndex to the real first or last image
-      currentIndex = currentIndex === 0 ? images.length : 1;
-      const translateX = -(currentIndex * 33.33);
-      galleryImages.style.transform = `translateX(${translateX}%)`;
-    }, 500);
-  }
+  galleryImages.style.transition = "transform 1s ease"; // Smooth transition
 }
 
 // Update images on load
 updateImages();
 
+// Next button event
 document.getElementById("next").addEventListener("click", () => {
-  // Increment index to show the next image
-  currentIndex = (currentIndex + 1) % imagesWithClones.length;
+  currentIndex++;
+  if (currentIndex === imagesWithClones.length - 1) {
+    setTimeout(() => {
+      currentIndex = 1; // Snap to the first real image
+      updateImages();
+    }, 1000); // Wait for transition to complete before snapping
+  }
   updateImages();
 });
 
+// Previous button event
 document.getElementById("prev").addEventListener("click", () => {
-  // Decrement index to show the previous image
-  currentIndex = (currentIndex - 1 + imagesWithClones.length) % imagesWithClones.length;
+  currentIndex--;
+  if (currentIndex === 0) {
+    setTimeout(() => {
+      currentIndex = images.length; // Snap to the last real image
+      updateImages();
+    }, 1000); // Wait for transition to complete before snapping
+  }
   updateImages();
 });
+
 
 //video
 document.getElementById("playButton").addEventListener("click", function () {

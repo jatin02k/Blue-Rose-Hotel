@@ -557,6 +557,15 @@ section {
     width: 100%; /* Control width */
     margin: 0 auto; /* Center the gallery */
 }
+.gallery-images {
+    display: flex;
+    transition: transform 1s linear; /* Linear for smooth looping */
+}
+
+.gallery-container {
+    overflow: hidden; /* Keeps only the current "view" visible */
+    width: 100%;
+}
 
 .gallery-images {
     display: flex; /* Use flex for image positioning */
