@@ -70,7 +70,7 @@ nav ul li {
     padding: 10px;
 }
 nav ul li a {
-    color: #2574b9;
+    color: #20056b;
     text-decoration: none;
     font-weight: bold;
 }
@@ -148,7 +148,7 @@ nav ul li a {
 
 /* Hero background image and overlay Section Styles */
 #home {
-    background-image: url('about.jpg'); /* Replace with your image path */
+    background-image: url('hotel.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     height: 70vh; /* Full viewport height */

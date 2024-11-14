@@ -70,7 +70,7 @@ nav ul li {
     padding: 10px;
 }
 nav ul li a {
-    color: #2574b9;
+    color: #20056b;
     text-decoration: none;
     font-weight: bold;
 }
@@ -246,6 +246,7 @@ h2 {
     height: 50vh; /* Fixed height based on viewport */
     overflow-y: auto; /* Allow vertical scrolling if needed */
     margin-top: 50px;
+    
 }
 
 .attractions-list ul {
@@ -259,7 +260,7 @@ h2 {
 
 .attractions-list a {
     text-decoration: none; /* Remove underline */
-    color: #021014; /* Dark color for text */
+    color: #120349; /* Dark color for text */
     font-weight: bold; /* Bold text */
 }
 
